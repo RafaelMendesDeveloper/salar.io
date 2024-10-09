@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Profissões</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <style>
+        /* Estilo dos botões e do nível de velocidade */
+        .controls {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .speed-level {
+            margin: 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>SALAR.IO</h1>
+    <div class="controls">
+        <button id="decrease">-</button>
+        <span class="speed-level" id="speed_level">Nível de Velocidade: 1x</span>
+        <button id="increase">+</button>
+    </div>
+    <h2 id="timer">0 segundos passados</h2>
+    <h3>POR REGIÃO DO PAÍS</h3>
+    <div class="card-container">
+        <div class="card">
+            <h2>NORTE</h2>
+            <p id="north_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>NORDESTE</h2>
+            <p id="northeast_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>CENTRO-OESTE</h2>
+            <p id="middlewest_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>SUDESTE</h2>
+            <p id="southeast_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>SUL</h2>
+            <p id="south_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>BRASIL</h2>
+            <p id="brazil_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>NEYMAR</h2>
+            <p id="neymar_salary">R$ 0.00</p>
+        </div>
+    </div>
+
+    <script src="scripts/time.js"></script>
+</body>
+</html>
