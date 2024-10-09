@@ -5,77 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Profissões</title>
     <link rel="stylesheet" href="styles/global.css">
-    <style>
-        /* Estilo dos botões e do nível de velocidade */
-        .controls {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-        }
-
-        .speed-level {
-            margin: 0 10px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        button {
-            padding: 10px 15px;
-            font-size: 16px;
-            color: white;
-            background-color: #4CAF50;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
+   </head>
 <body>
-    <h1>SALAR.IO</h1>
-    <div class="controls">
-        <button id="decrease">-</button>
-        <span class="speed-level" id="speed_level">Nível de Velocidade: 1x</span>
-        <button id="increase">+</button>
+    <div class="header">
+        <a class="botaoAlerta" onclick="mostrarAlerta()">SOBRE</a>
+        <div class="title">
+            <h1>SALAR.IO<span>acompanhe a DESigualdade!</span></h1>
+        </div>
+        <a href="https://rafaelmendesdeveloper.github.io" target="_blank" class="contact">CONTATO</a>
     </div>
-    <h2 id="timer">0 segundos passados</h2>
-    <h3>POR REGIÃO DO PAÍS</h3>
+
+    <div class="header-mobile">
+        <div class="header-mobile-links">
+            <a class="botaoAlerta" onclick="mostrarAlerta()">SOBRE</a>
+            <a href="https://rafaelmendesdeveloper.github.io" target="_blank" class="contact">CONTATO</a> 
+        </div>
+        <div class="title">
+            <h1>SALAR.IO<span>acompanhe a DESigualdade!</span></h1>
+        </div>
+    </div>
+    
+    <h2 id="timer"></h2>
+    <!-- profissoes
+    regioes
+    paises -->
+
+    <div class="fundo" id="fundo"></div>
+    <div class="alerta" id="alerta">
+        <h1>SOBRE</h1>
+        <p>PROJETO DE PORTFÓLIO CRIADO PELO RAFAEL MENDES, UTILIZANDO O BÁSICO DO DESENVOLVIMENTO WEB. PARA VERMOS QUANTOS REAIS POR MINUTO CADA ÁREA GANHA!</p>
+        <button class="botao-fechar" onclick="fecharAlerta()">X</button>
+    </div>
+    
+
+    <div class="jobs">
+        <h3>POR PROFISSÃO</h3>
+    <div class="card-container">
+       
+        <div class="card">
+            <h2>GARI</h2>
+            <img src="assets/gari.png">
+            <p id="trashman_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>POLICIAL</h2>
+            <img src="assets/policial.png">
+            <p id="police_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>PROGRAMADOR</h2>
+            <img src="assets/programador.png">
+            <p id="it_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>ADVOGADO</h2>
+            <img src="assets/advogado.png">
+            <p id="lawyer_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>MÉDICO</h2>
+            <img src="assets/médico.png">
+            <p id="doctor_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>PRESIDENTE</h2>
+            <img src="assets/presidente.png">
+            <p id="president_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>NEYMAR</h2>
+            <img src="assets/neymar.png">
+            <p id="neymar_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>PROFESSOR</h2>
+            <img src="assets/professor.png">
+            <p id="teacher_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>BILIONÁRIO</h2>
+            <img src="assets/bilionario.png">
+            <p id="billionaire_salary">R$ 0.00</p>
+        </div>
+        <div class="card">
+            <h2>SALÁRIO MÍNIMO</h2>
+            <img src="assets/salario minimo.png">
+            <p id="minimal_salary">R$ 0.00</p>
+        </div>
+    </div>
+    </div>
+    <div class="states">
+        <h3>POR REGIÃO DO PAÍS</h3>
     <div class="card-container">
         <div class="card">
             <h2>NORTE</h2>
+            <img src="assets/norte.png">
             <p id="north_salary">R$ 0.00</p>
         </div>
         <div class="card">
             <h2>NORDESTE</h2>
+            <img src="assets/nordeste.png">
             <p id="northeast_salary">R$ 0.00</p>
         </div>
         <div class="card">
             <h2>CENTRO-OESTE</h2>
+            <img src="assets/centrooeste.png">
             <p id="middlewest_salary">R$ 0.00</p>
         </div>
         <div class="card">
             <h2>SUDESTE</h2>
+            <img src="assets/sudeste.png">
             <p id="southeast_salary">R$ 0.00</p>
         </div>
         <div class="card">
             <h2>SUL</h2>
+            <img src="assets/sul.png">
             <p id="south_salary">R$ 0.00</p>
         </div>
-        <div class="card">
+        <!-- <div class="card">
             <h2>BRASIL</h2>
             <p id="brazil_salary">R$ 0.00</p>
         </div>
         <div class="card">
             <h2>NEYMAR</h2>
             <p id="neymar_salary">R$ 0.00</p>
-        </div>
+        </div> -->
+    </div>
     </div>
 
-    <script src="scripts/time.js"></script>
+    <div class="footer">
+        <p>Criado com ❤️ por <a href="https://rafaelmendesdeveloper.github.io" target="_blank">Rafael Mendes</a></p>
+    </div>
+
+    <script src="scripts/index.js"></script>
 </body>
 </html>
