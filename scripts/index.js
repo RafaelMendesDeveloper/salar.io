@@ -1,4 +1,5 @@
 let seconds = 0;
+let minutes = 0;
 
 //states
 let northSalary = 0;
