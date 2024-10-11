@@ -6,7 +6,6 @@ let northeastSalary = 0;
 let middlewestSalary = 0;
 let southeastSalary = 0;
 let southSalary = 0;
-let brazilSalary = 0;
 
 //jobs
 let trashmanSalary = 0;
@@ -19,6 +18,16 @@ let teacherSalary = 0;
 let neymarSalary = 0;
 let billionaireSalary = 0;
 let minimalSalary = 0;
+
+//countries
+let brazilSalary = 0;
+let argentinaSalary = 0;
+let usaSalary = 0;
+let portugalSalary = 0;
+let japanSalary = 0;
+let senegalSalary = 0;
+let switzerlandSalary = 0;
+let afeganisthanSalary = 0;
 
 let interval = 17; // Intervalo inicial de 1 minuto
 let speedLevel = 1; // Nível de velocidade
@@ -52,7 +61,27 @@ function updateTime() {
 function setSalaries() {
     setJobsSalaries();
     setRegionSalaries();
-    // setBrazilSalary();
+    setCountriesSalaries();
+}
+
+function setCountriesSalaries(){
+    brazilSalary += 0.0011;
+    argentinaSalary += 0.00096;
+    usaSalary += 0.0106;
+    portugalSalary += 0.00299;
+    japanSalary += 0.00656;
+    senegalSalary += 0.00037;
+    switzerlandSalary += 0.0156;
+    afeganisthanSalary += 0.000077;
+
+    document.getElementById('brazil_salary').innerText = `R$ ${brazilSalary.toFixed(2)}`;
+    document.getElementById('argentina_salary').innerText = `R$ ${argentinaSalary.toFixed(2)}`;
+    document.getElementById('usa_salary').innerText = `R$ ${usaSalary.toFixed(2)}`;
+    document.getElementById('portugal_salary').innerText = `R$ ${portugalSalary.toFixed(2)}`;
+    document.getElementById('japan_salary').innerText = `R$ ${japanSalary.toFixed(2)}`;
+    document.getElementById('senegal_salary').innerText = `R$ ${senegalSalary.toFixed(2)}`;
+    document.getElementById('switzerland_salary').innerText = `R$ ${switzerlandSalary.toFixed(2)}`;
+    document.getElementById('afeganistan_salary').innerText = `R$ ${afeganisthanSalary.toFixed(2)}`;
 }
 
 function setJobsSalaries(){
@@ -109,4 +138,16 @@ function mostrarAlerta() {
 function fecharAlerta() {
     document.getElementById('fundo').style.display = 'none';
     document.getElementById('alerta').style.display = 'none';
+}
+
+function setThemeDark(){
+    document.getElementById('light_mode').style.display = 'none';
+    document.getElementById('dark_mode').style.display = 'block';
+    document.body.classList.toggle('dark-theme');
+}
+
+function setThemeLight(){
+    document.getElementById('light_mode').style.display = 'block';
+    document.getElementById('dark_mode').style.display = 'none';
+    document.body.classList.remove('dark-theme');
 }

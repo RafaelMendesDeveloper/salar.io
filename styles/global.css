@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color: #ffffff;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,18 +19,52 @@ body {
     overflow: hidden;
 }
 
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --grey: #333;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.dark-theme{
+    --white: #000000;
+    --black: #ffffff;
+    --grey: #e2e2e2;
+    --shadow: 0 4px 8px rgba(255, 255, 255, 0.373);
+}
+
 img {
     max-width: 100%;
     height: auto;
 }
 
-.states, .jobs {
+.theme-togle img{
+    max-width: 40px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.theme-togle{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+}
+
+#dark_mode{
+    display: none;
+}
+
+.states, .jobs, .countries {
     margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+
 
 .jobs img {
     max-height: 100px;
@@ -43,6 +77,10 @@ img {
     max-width: 250px;
 }
 
+.countries img{
+    max-width: 150px;
+}
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Duas colunas para telas maiores */
@@ -51,10 +89,10 @@ img {
 }
 
 .card {
-    background-color: #fff;
+    background-color: var(--white);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     text-align: center;
     transition: transform 0.3s;
 }
@@ -64,14 +102,14 @@ img {
 }
 
 .card h2 {
-    color: #333;
+    color: var(--grey);
     font-size: 18px;
     margin-bottom: 10px;
 }
 
 h3 {
     font-size: 20px;
-    color: #000;
+    color: var(--black);
     word-spacing: 1px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -81,7 +119,7 @@ h3 {
 
 h2 {
     font-size: 15px;
-    color: #444;
+    color: var(--grey);
     word-spacing: 1px;
     font-weight: normal;
     letter-spacing: 2px;
@@ -112,7 +150,7 @@ h2 {
 .title h1 span {
     margin-top: 5px;
     font-size: 15px;
-    color: #444;
+    color: var(--grey);
     word-spacing: 1px;
     font-weight: normal;
     letter-spacing: 2px;
@@ -133,7 +171,7 @@ h2 {
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #ccc;
     height: 5px;
-    background-color: #f8f8f8;
+    background-color: var(--white);
 }
 
 .header , .header-mobile{
@@ -147,12 +185,12 @@ h2 {
 .header a , .header-mobile a{
     margin-top: 20px;
     text-decoration: none;
-    color: black;
+    color: var(--black);
 }
 
 .botaoAlerta {
     cursor: pointer;
-    color: white;
+    color: var(--white);
     border: none;
     background: none;
     font-size: 16px;
@@ -183,7 +221,7 @@ h2 {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--white);
     border: 1px solid #ccc;
     border-radius: 8px;
     z-index: 1000;
@@ -202,6 +240,7 @@ h2 {
 .alerta p{
     text-align: left;
     margin: 10px;
+    color: var(--black);
 }
 
 .fundo {
@@ -221,7 +260,7 @@ h2 {
     padding: 10px 10px;
     box-shadow: 0.1, 0.1, 0.1, 1;
     background-color: #ffc107;
-    color: white;
+    color: var(--white);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -238,6 +277,7 @@ h2 {
 
 .footer{
     margin-bottom: 30px;
+    color: var(--black);
 }
 
 .footer a{
